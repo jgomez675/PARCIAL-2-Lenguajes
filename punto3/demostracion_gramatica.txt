@@ -1,0 +1,22 @@
+DEMOSTRACIÓN LL(1)
+
+Gramática: S → AaAb | BbBa A → ε B → ε
+
+1.  Simplificación: A → ε, B → ε Entonces: S → ab | ba
+
+2.  FIRST: FIRST(A) = { ε } FIRST(B) = { ε } FIRST(S) = { a, b }
+
+3.  FOLLOW: FOLLOW(S) = { $ } FOLLOW(A) = { a, b } FOLLOW(B) = { a, b }
+
+4.  Tabla LL(1):
+
+         a        b
+
+    S S→AaAb S→BbBa A A→ε A→ε B B→ε B→ε
+
+5.  Verificación: FIRST(AaAb) = {a} FIRST(BbBa) = {b}
+
+No hay intersección → válida
+
+6.  Conclusión: La gramática es LL(1) porque no presenta conflictos en
+    FIRST ni FOLLOW y la tabla es determinística.
