@@ -1,0 +1,90 @@
+SISTEMA CRUD NoSQL - INTÉRPRETE
+
+1.  DESCRIPCIÓN GENERAL
+
+El presente sistema corresponde a un intérprete de un lenguaje de
+dominio específico (DSL) diseñado para realizar operaciones CRUD
+(Create, Read, Update, Delete) sobre una base de datos NoSQL en memoria.
+
+El lenguaje permite manipular colecciones y documentos utilizando una
+sintaxis simple, clara y orientada a estructuras tipo JSON. Su
+implementación sigue un enfoque modular basado en programación orientada
+a objetos, lo cual garantiza escalabilidad, mantenibilidad y claridad en
+su funcionamiento.
+
+2.  CARACTERÍSTICAS DEL LENGUAJE
+
+-   Sintaxis sencilla y fácil de aprender
+-   Soporte para operaciones CRUD completas
+-   Manejo de datos tipo JSON (clave-valor)
+-   Evaluación de condiciones con operadores (=, >, <)
+-   Ejecución interactiva en consola
+-   Arquitectura modular (parser, intérprete y base de datos)
+
+3.  ESTRUCTURA DEL LENGUAJE
+
+El lenguaje está compuesto por los siguientes comandos principales:
+
+INSERT: Permite insertar nuevos documentos en una colección FIND:
+Permite consultar documentos UPDATE: Permite modificar documentos
+existentes DELETE: Permite eliminar documentos
+
+4.  MODO DE USO
+
+El sistema se ejecuta desde la terminal mediante el archivo principal:
+
+    python main.py
+
+Una vez iniciado, el usuario puede ingresar comandos directamente en la
+consola.
+
+Para finalizar la ejecución del sistema, se utiliza el comando:
+
+    EXIT
+
+5.  SINTAXIS DE LOS COMANDOS
+
+INSERT: INSERT {campo: valor, campo: valor}
+
+Ejemplo: INSERT usuarios {nombre: “Juan”, edad: 20}
+
+FIND: FIND FIND WHERE
+
+Ejemplo: FIND usuarios FIND usuarios WHERE edad > 20
+
+UPDATE: UPDATE SET = WHERE
+
+Ejemplo: UPDATE usuarios SET edad = 30 WHERE nombre = “Juan”
+
+DELETE: DELETE WHERE
+
+Ejemplo: DELETE usuarios WHERE edad < 25
+
+6.  TIPOS DE DATOS SOPORTADOS
+
+-   Cadenas de texto: “texto”
+-   Números enteros: 10, 25, 100
+
+7.  CONSIDERACIONES
+
+-   Los comandos deben escribirse en mayúsculas
+-   Los valores tipo cadena deben ir entre comillas dobles
+-   La sintaxis debe respetar los espacios establecidos
+-   Las colecciones se crean automáticamente al insertar datos
+
+8.  ARQUITECTURA DEL SISTEMA
+
+El sistema está dividido en tres componentes principales:
+
+-   Parser: encargado de analizar y estructurar los comandos ingresados
+-   Database: encargado de almacenar y manipular los datos
+-   Interpreter: encargado de coordinar la ejecución de los comandos
+
+9.  CONCLUSIÓN
+
+Este lenguaje demuestra cómo es posible diseñar e implementar un
+intérprete funcional para operaciones sobre bases de datos NoSQL,
+integrando conceptos fundamentales como gramáticas, parsing y
+programación orientada a objetos. Su diseño modular facilita futuras
+extensiones y mejoras, tales como validación sintáctica avanzada o
+integración con herramientas como ANTLR.
